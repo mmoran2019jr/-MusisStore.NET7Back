@@ -1,0 +1,623 @@
+{
+	"info": {
+		"_postman_id": "5026c20a-97a0-4803-a904-34c6c53c86de",
+		"name": "Music Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23892700"
+	},
+	"item": [
+		{
+			"name": "Conciertos",
+			"item": [
+				{
+					"name": "Listar Conciertos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Concerts?filter=&page=1&rows=5",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Concerts"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "rows",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un Concierto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Concerts/4",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Concerts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insertar Concierto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Skillet\",\r\n  \"description\": \"Musica Rock a todo volumen\",\r\n  \"idGenre\": 1,\r\n  \"dateEvent\": \"2023-04-11\",\r\n  \"timeEvent\": \"21:30\",\r\n  \"place\": \"Madison Square Garden\",\r\n  \"unitPrice\": 250.90,\r\n  \"ticketsQuantity\": 9000,\r\n  \"base64Image\":\"{{image}}\",\r\n  \"fileName\":\"skillet.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Concerts",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Concerts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un Concierto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Blackpink\",\r\n    \"description\": \"Blackpink en tu area\",\r\n    \"place\": \"Madison Square Garden\",\r\n    \"dateEvent\": \"2023-03-20\",\r\n    \"timeEvent\": \"20:30:00\",\r\n    \"ticketsQuantity\": 10000,\r\n    \"IdGenre\": 6,\r\n    \"status\": \"Activo\",\r\n    \"unitPrice\": 340.80,\r\n    \"base64Image\": \"{{image}}\",\r\n    \"fileName\": \"blackpink.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Concerts/4",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Concerts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un concierto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbIkFkbWluIiwiVXNlciJdLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIyMDIzLTAyLTIzIDIxOjE2OjQ1IiwibmJmIjoxNjc3MTE4NjA1LCJleHAiOjE2NzcyMDUwMDUsImlzcyI6Ik1pdG9Db2RlIiwiYXVkIjoibG9jYWxob3N0In0.Kz3_yvmBnfOMPyt5oIZpPNSWcBhGsFr52NWT3AlSVi4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Concerts/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Concerts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finalizar un concierto",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Concerts/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Concerts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generos",
+			"item": [
+				{
+					"name": "Listar Generos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Genres",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Genres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Genero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Blues\",\r\n    \"status\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Genres",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Genres"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ventas",
+			"item": [
+				{
+					"name": "Crear Venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"concertId\":5,\r\n  \"ticketsQuantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Sales",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Ventas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Sales/ListSales",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Sales",
+								"ListSales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Ventas por Fecha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Sales/ListSalesByDate?dateStart=2023-01-01xy&dateEnd=xxxxxx",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Sales",
+								"ListSalesByDate"
+							],
+							"query": [
+								{
+									"key": "dateStart",
+									"value": "2023-01-01xy"
+								},
+								{
+									"key": "dateEnd",
+									"value": "xxxxxx"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Venta por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Sales/4",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Sales",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Reportes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Reports/ReportSales?dateStart=2023-01-01&dateEnd=2023-02-20",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Reports",
+								"ReportSales"
+							],
+							"query": [
+								{
+									"key": "dateStart",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "dateEnd",
+									"value": "2023-02-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.collectionVariables.set('token', response.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"orlando.erick@gmail.com\",\r\n  \"password\": \"miclavesecreta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Users/Login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Users",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Erick\",\r\n  \"lastName\": \"Orlando\",\r\n  \"email\": \"orlando.erick@gmail.com\",\r\n  \"documentNumber\": \"888994423\",\r\n  \"documentType\": \"DNI\",\r\n  \"age\": 45,\r\n  \"password\": \"miclavesecreta\",\r\n  \"confirmPassword\": \"miclavesecreta\",\r\n  \"role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Users/Register",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Users",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitud de Reseteo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\" :\"orlando.erick@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Users/SendTokenToResetPassword",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Users",
+								"SendTokenToResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reseteo de clave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"CfDJ8CnSw7sMh05GgltoBmBS97uCEVZ/pc76tSCKgq3EllHkaDw00nmGby9mU94/HrDL0afzWuRLbYfkmpcLBxfonNgZ2edhx5URZd8FSTHNgNhx7zutC4QtrfAd/5YPfypZApV9pvpIujVfFzEN8yH9z+NESJa9tgUUFiEvZV5WSbmbMcZx9+i5hJLFEZF7nXrw1vUm49plzvdwbXxFDoLB6zgyAhxOt707BsBrIl7HzdCv\",\r\n  \"email\": \"orlando.erick@gmail.com\",\r\n  \"newPassword\": \"MiClaveSecreta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Users/ResetPassword",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Users",
+								"ResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cambiar clave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"orlando.erick@gmail.com\",\r\n  \"oldPassword\": \"MiClaveSecreta\",\r\n  \"newPassword\": \"miclavesecreta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/Users/ChangePassword",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Users",
+								"ChangePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HealthChecks",
+			"item": [
+				{
+					"name": "HealthCheck general",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:2000/health",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Healtchecks de Base de Datos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:2000/health/db",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"health",
+								"db"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/Home",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"Home"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "https://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "image",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

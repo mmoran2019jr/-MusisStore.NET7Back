@@ -1,0 +1,13 @@
+2023-02-27 20:26:15 [INF] User profile is available. Using 'C:\Users\erick\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-27 20:26:15 [INF] Now listening on: https://localhost:8000
+2023-02-27 20:26:15 [INF] Now listening on: http://localhost:6000
+2023-02-27 20:26:15 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-27 20:26:15 [INF] Hosting environment: Development
+2023-02-27 20:26:15 [INF] Content root path: C:\GitProjects\TiendaMusical\MusicStore
+2023-02-27 20:26:15 [INF] Request starting HTTP/2 GET https://localhost:8000/swagger/index.html - -
+2023-02-27 20:26:16 [INF] Request finished HTTP/2 GET https://localhost:8000/swagger/index.html - - - 200 - text/html;charset=utf-8 162.4799ms
+2023-02-27 20:26:16 [INF] Request starting HTTP/2 GET https://localhost:8000/_framework/aspnetcore-browser-refresh.js - -
+2023-02-27 20:26:16 [INF] Request finished HTTP/2 GET https://localhost:8000/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 6.0772ms
+2023-02-27 20:26:16 [INF] Request starting HTTP/2 GET https://localhost:8000/swagger/v1/swagger.json - -
+2023-02-27 20:26:16 [INF] Request finished HTTP/2 GET https://localhost:8000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 111.9022ms
+2023-02-27 20:27:10 [INF] Application is shutting down...

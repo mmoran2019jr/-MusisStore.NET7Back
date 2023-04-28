@@ -1,0 +1,36 @@
+2023-02-27 20:27:59 [INF] User profile is available. Using 'C:\Users\erick\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-27 20:27:59 [INF] Now listening on: https://localhost:8000
+2023-02-27 20:27:59 [INF] Now listening on: http://localhost:6000
+2023-02-27 20:27:59 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-27 20:27:59 [INF] Hosting environment: Development
+2023-02-27 20:27:59 [INF] Content root path: C:\GitProjects\TiendaMusical\MusicStore
+2023-02-27 20:27:59 [INF] Request starting HTTP/2 GET https://localhost:8000/swagger/index.html - -
+2023-02-27 20:27:59 [INF] Request finished HTTP/2 GET https://localhost:8000/swagger/index.html - - - 200 - text/html;charset=utf-8 157.0004ms
+2023-02-27 20:27:59 [INF] Request starting HTTP/2 GET https://localhost:8000/_framework/aspnetcore-browser-refresh.js - -
+2023-02-27 20:27:59 [INF] Request finished HTTP/2 GET https://localhost:8000/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 5.4715ms
+2023-02-27 20:28:00 [INF] Request starting HTTP/2 GET https://localhost:8000/swagger/v1/swagger.json - -
+2023-02-27 20:28:00 [INF] Request finished HTTP/2 GET https://localhost:8000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.9980ms
+2023-02-27 20:29:29 [INF] Application is shutting down...
+2023-02-27 20:30:11 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-02-27 20:30:12 [WRN] Error de autenticacion para el usuario juanito@microsoft.com
+2023-02-27 20:35:04 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-02-27 20:35:05 [WRN] Error de autenticacion para el usuario juanito@microsoft.com
+2023-02-27 20:35:51 [WRN] Error en conversion de formato de fecha The string '2023-01-01xx' was not recognized as a valid DateTime. There is an unknown word starting at index '10'.
+System.FormatException: The string '2023-01-01xx' was not recognized as a valid DateTime. There is an unknown word starting at index '10'.
+   at System.DateTime.Parse(String s)
+   at MusicStore.Controllers.SalesController.GetListSalesByDate(String dateStart, String dateEnd, Int32 page, Int32 rows) in C:\GitProjects\TiendaMusical\MusicStore\Controllers\SalesController.cs:line 60
+2023-02-27 20:37:53 [WRN] Error en conversion de formato de fecha The string '2023-01-01xy' was not recognized as a valid DateTime. There is an unknown word starting at index '10'.
+System.FormatException: The string '2023-01-01xy' was not recognized as a valid DateTime. There is an unknown word starting at index '10'.
+   at System.DateTime.Parse(String s)
+   at MusicStore.Controllers.SalesController.GetListSalesByDate(String dateStart, String dateEnd, Int32 page, Int32 rows) in C:\GitProjects\TiendaMusical\MusicStore\Controllers\SalesController.cs:line 60
+2023-02-27 21:56:49 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-02-27 22:01:42 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-02-27 22:01:43 [WRN] Se realizo una busqueda sin filtros
+2023-02-27 22:01:57 [WRN] Se realizo una busqueda sin filtros
+2023-02-27 22:06:12 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-02-27 22:06:13 [WRN] Se realizo una busqueda sin filtros
+2023-02-27 22:06:25 [WRN] Se realizo una busqueda sin filtros
+2023-02-27 22:06:43 [WRN] Se realizo una busqueda sin filtros
+2023-02-27 22:06:52 [WRN] Se realizo una busqueda sin filtros
+2023-02-27 22:07:02 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-02-27 22:07:03 [WRN] Se realizo una busqueda sin filtros
